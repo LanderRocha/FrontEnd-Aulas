@@ -1,0 +1,478 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.8; /* Aumentando um pouco a line-height para melhor leitura */
+  -webkit-font-smoothing: antialiased; /* Melhora a renderização da fonte em navegadores WebKit */
+  -moz-osx-font-smoothing: grayscale; /* Melhora a renderização da fonte no Firefox */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto; /* Adicionando um pouco de margem vertical */
+  padding: 0 30px; /* Aumentando um pouco o padding horizontal */
+}
+
+.logo {
+  font-size: 1.7rem; /* Aumentando um pouco o tamanho do logo */
+  color: #e91e63;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #d81b60;
+}
+
+/* Header modernizado */
+.site-header {
+  background-color: rgba(255, 255, 255, 0.95); /* Fundo branco translúcido */
+  padding: 20px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra mais suave */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px); /* Efeito de blur no fundo para maior modernidade */
+}
+
+nav.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Aumentando o espaçamento entre os itens do menu */
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #555; /* Cor um pouco mais clara */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #e91e63;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 25px; /* Aumentando um pouco o padding dos botões */
+  border-radius: 30px; /* Bordas mais arredondadas */
+  text-decoration: none;
+  font-weight: 600; /* Fonte um pouco mais grossa */
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Adicionando uma leve sombra aos botões */
+}
+
+.button.primary {
+  background-color: #e91e63;
+  color: #fff;
+}
+
+.button.primary:hover {
+  background-color: #d81b60;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button.secondary {
+  background-color: #fff;
+  color: #e91e63;
+  border: 2px solid #e91e63; /* Borda mais grossa */
+}
+
+.button.secondary:hover {
+  background-color: #e91e63;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.button.tertiary {
+  background-color: #f8f8f8; /* Fundo mais claro para botões terciários */
+  color: #e91e63;
+  border: 1px solid #e91e63;
+}
+
+.button.tertiary:hover {
+  background-color: #e91e63;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px; /* Aumentando o espaçamento das barras */
+}
+
+.bar {
+  width: 28px; /* Barras um pouco maiores */
+  height: 3px;
+  background-color: #555; /* Cor mais clara das barras */
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg); /* Ajustando a animação do X */
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg); /* Ajustando a animação do X */
+}
+
+/* Hero Section Modernizada */
+.hero {
+  background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%); /* Gradiente suave */
+  padding: 100px 0; /* Aumentando o padding vertical */
+  border-radius: 15px; /* Adicionando um pouco de borda arredondada */
+  margin-bottom: 40px; /* Aumentando a margem inferior */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); /* Sombra mais pronunciada */
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 3.5rem; /* Título maior */
+  color: #e91e63;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.hero-text .subtitle {
+  font-size: 1.3rem; /* Subtítulo um pouco maior */
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.hero-image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px; /* Bordas mais arredondadas na imagem */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave na imagem */
+}
+
+/* Seções Modernizadas */
+.section {
+  padding: 80px 0; /* Aumentando o padding vertical das seções */
+}
+
+.bg-light-pink {
+  background-color: #fcdde6;
+  border-radius: 15px; /* Adicionando um pouco de borda arredondada */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Adicionando uma leve sombra */
+  margin-bottom: 40px; /* Adicionando margem inferior entre as seções */
+}
+
+.grid-sobre,
+.grid-livro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.image-container img,
+.book-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px; /* Bordas mais arredondadas nas imagens */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Sombra mais suave nas imagens */
+}
+
+.text-content h2,
+.book-content h2,
+.materials-grid h2,
+.products-grid h2,
+.contact-info h2,
+.contact-form h3,
+.trabalhos-list h2,
+.free-projects-grid h2 {
+  font-size: 2.4rem; /* Títulos maiores */
+  color: #e91e63;
+  margin-bottom: 25px;
+  line-height: 1.3;
+}
+
+.section p,
+.book-content p,
+.materials-info p,
+.product-info-text p,
+.contact-info p {
+  font-size: 1.15rem; /* Texto um pouco maior */
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #555; /* Cor do texto um pouco mais clara */
+}
+
+/* Cards Modernizados */
+.materials-grid,
+.products-grid,
+.free-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Cards um pouco mais largos */
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.materials-card,
+.product-card,
+.free-project-card {
+  background-color: #fff;
+  border-radius: 15px; /* Bordas mais arredondadas nos cards */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Sombra mais suave nos cards */
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.materials-card:hover,
+.product-card:hover,
+.free-project-card:hover {
+  transform: translateY(-5px); /* Leve efeito de elevação ao passar o mouse */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.materials-card img,
+.product-card img,
+.free-project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 15px 15px 0 0; /* Bordas arredondadas apenas no topo */
+}
+
+.materials-card-content,
+.product-card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.materials-card-content h3,
+.product-card-content h3 {
+  font-size: 1.3rem;
+  color: #e91e63;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* Trabalhos Section Modernizada */
+.trabalhos-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.trabalhos-list ul li {
+  font-size: 1.15rem;
+  color: #555;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.trabalhos-list ul li i {
+  color: #e91e63;
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+/* Contato Section Modernizada */
+.grid-contato {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px; /* Aumentando o gap */
+}
+
+.contact-info ul li {
+  font-size: 1.15rem;
+  color: #555;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info ul li i {
+  color: #e91e63;
+  margin-right: 15px;
+  font-size: 1.2rem;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 20px; /* Aumentando a margem */
+  font-size: 1.7rem; /* Ícones maiores */
+  color: #e91e63;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #d81b60;
+}
+
+.contact-form .form-group {
+  margin-bottom: 25px; /* Aumentando a margem */
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px; /* Aumentando a margem */
+  font-weight: 600; /* Fonte mais grossa */
+  color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 12px; /* Aumentando o padding */
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Bordas mais arredondadas */
+  font-size: 1.1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  border-color: #e91e63;
+  outline: none; /* Removendo a borda de foco padrão */
+  box-shadow: 0 0 5px rgba(233, 30, 99, 0.3); /* Adicionando uma sombra de foco */
+}
+
+.contact-form button[type="submit"] {
+  padding: 15px 30px; /* Aumentando o padding do botão de submit */
+  border-radius: 30px;
+  font-size: 1.1rem;
+}
+
+/* Footer Modernizado */
+.site-footer {
+  background-color: #f8f8f8; /* Fundo mais claro */
+  color: #777; /* Cor do texto mais clara */
+  text-align: center;
+  padding: 30px 0; /* Aumentando o padding */
+  font-size: 0.95rem;
+  border-top: 1px solid #eee; /* Adicionando uma linha superior */
+}
+
+/* Media Queries for Responsividade (ligeiramente ajustados) */
+@media (max-width: 768px) {
+  .container {
+      padding: 0 20px;
+      margin-top: 20px; /* Reduzindo a margem vertical em telas menores */
+  }
+
+  .nav-menu {
+      gap: 20px; /* Reduzindo o gap no menu mobile */
+  }
+
+  .hero {
+      padding: 80px 20px; /* Ajustando o padding do hero em mobile */
+      margin-bottom: 30px;
+  }
+
+  .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+  }
+
+  .hero-image-container {
+      order: -1;
+      margin-bottom: 30px;
+      text-align: center;
+  }
+
+  .text-content,
+  .book-content {
+      text-align: center; /* Centralizando o texto em telas menores */
+  }
+
+  .grid-sobre,
+  .grid-livro,
+  .grid-contato {
+      grid-template-columns: 1fr;
+  }
+
+  .materials-grid,
+  .products-grid,
+  .free-projects-grid {
+      grid-template-columns: 1fr; /* Cards em tela cheia em mobile */
+  }
+
+  .contact-info {
+      margin-bottom: 40px;
+      text-align: center; /* Centralizando informações de contato */
+  }
+
+  .social-links {
+      justify-content: center; /* Centralizando ícones sociais */
+  }
+}
+
+/* Mudando o fundo de rosa claro para rosa escuro em seções alternadas */
+.section:nth-child(even) {
+  background-color: #f48fb1; /* Rosa mais escuro */
+}
+
+.bg-light-pink {
+  background-color: #fcdde6; /* Mantendo a classe para outras seções, se necessário */
+}
+
+/* Se você quiser aplicar o rosa escuro diretamente nas classes existentes: */
+.bg-light-pink:nth-child(even) {
+  background-color: #f48fb1;
+}
+
+
+/* Ajuste para a primeira seção (Hero) se ela estiver com fundo rosa claro */
+body > main > section:first-child {
+  background-color: #fce4ec; /* Mantendo o rosa bem claro para o Hero */
+}
+
+/* Ajuste específico para a seção de Projetos Gratuitos manter o rosa claro */
+#projetos-gratuitos {
+  background-color: #fcdde6; /* Rosa claro para Projetos Gratuitos */
+}
+
+/* Ajuste específico para a seção de Contato manter o rosa claro */
+#contato {
+  background-color: #fcdde6; /* Rosa claro para Contato */
+}
+
+/* Ajuste específico para a seção "E Muito Mais!" manter o rosa claro */
+#produtos.section.bg-light-pink {
+  background-color: #fcdde6; /* Rosa claro para "E Muito Mais!" */
+}
+
+/* Ajuste específico para a seção do Livro manter o rosa claro */
+#livro.section.bg-light-pink {
+  background-color: #fcdde6; /* Rosa claro para o Livro */
+}
+.contact-info ul li a {
+  color: #e91e63; /* Define a cor do link para rosa */
+  text-decoration: none; /* Remove a sublinhado padrão do link */
+  font-weight: bold; /* Opcional: Deixa o texto em negrito */
+  transition: color 0.3s ease; /* Adiciona uma transição suave para o hover */
+}
+
+.contact-info ul li a:hover {
+  color: #d81b60; /* Cor do link ao passar o mouse (um tom mais escuro de rosa) */
+}
